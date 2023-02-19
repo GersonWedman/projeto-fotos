@@ -3,7 +3,7 @@
     <h2>{{ title }}</h2>
 
     <div *ngIf="fotos.length > 0">
-      <img [src]="fotos[fotoAtual]" height="800px" />
+      <img [src]="fotos[fotoAtual]" width="540px" />
       <div>
         Foto {{ fotoAtual + 1 }} de {{ fotos.length }}
         <button
