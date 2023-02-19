@@ -1,0 +1,39 @@
+<div class="principal">
+    <h2>{{ title }}</h2>
+  
+    <div *ngIf="fotos.length > 0">
+      <img [src]="fotos[fotoAtual]" height="800px" />
+      <div>
+        Foto {{ fotoAtual + 1 }} de {{ fotos.length }}
+        <button
+          (click)="voltarParaPrimeira()"
+          [disabled]="fotoAtual == primeira()"
+          class="btn btn-success"
+        >
+          |<<
+        </button>
+        <button
+          (click)="voltarParaAnterior()"
+          [disabled]="fotoAtual == primeira()"
+          class="btn btn-primary"
+        >
+          <
+        </button>
+        <button
+          (click)="irParaProxima()"
+          [disabled]="fotoAtual == ultima()"
+          class="btn btn-primary"
+        >
+          >
+        </button>
+        <button
+          (click)="vaiParaUltima()"
+          [disabled]="fotoAtual == ultima()"
+          class="btn btn-success"
+        >
+          >>|
+        </button>
+      </div>
+    </div>
+  </div>
+  
